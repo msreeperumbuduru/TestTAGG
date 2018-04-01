@@ -1,60 +1,23 @@
 package automationFramework;
 
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import appModules.*;
 import pageObjects.*;
 import utility.*;
 
-public class Sprint3 {
-	
-      
-	public static WebDriver driver = null;
-    
-	
-	
-	@BeforeSuite
-	public void launch() throws Exception {
+public class Sprint3 extends Constant {
 		
-		//System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
-		//Sprint3.driver = new ChromeDriver();
-		System.setProperty("webdriver.gecko.driver", "C:\\drivers\\geckodriver.exe");
-		Sprint3.driver = new FirefoxDriver();
-		Sprint3.driver.manage().deleteAllCookies();
-		Sprint3.driver.manage().window().maximize();
-		Sprint3.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		Sprint3.driver.get(Constant.URL);
-    } 
-	
-		
-	//add email template - Bsn Admin
-	@Test(enabled=false, priority=1)
-    public void addTmpBadmin() throws Exception{
-		Login_Action.Execute(driver, "BusinessAdmin");
-        HeaderLinks.lnk_MyBusiness(driver).click();
-        Log.info("Clicked MyBusiness Link");
-        HeaderLinks.lnk_emailtmp(driver).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        Logout_Action.Execute(driver);
-        //--new email template needed
-    }
-        
-    //add email template - CQ Admin
-	@Test(enabled=false, priority=2)
-	public void addTmpCqAdmin() throws Exception{
-		Login_Action.Execute(driver, "CharityQAdmin");
-        HeaderLinks.lnk_MyBusiness(driver).click();
-        Log.info("Clicked MyBusiness Link");
-        HeaderLinks.lnk_emailtmp(driver).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        Logout_Action.Execute(driver);
-        //--new email template needed
+		public Sprint3() {
+			super();
 	}
 	
-        
     //verify delete a user - CQ Admin
 	@Test(enabled=false,priority=3)
 	public void deleteUserCQAdmin() throws Exception {
@@ -66,23 +29,14 @@ public class Sprint3 {
         String Actualtext = UsersPage.input_emailAddr(driver).getAttribute("value");
         System.out.println("email is:" +Actualtext);
         UsersPage.UpProfileCancel(driver).click();
-        System.out.print("1");
         UsersPage.btn_DeleteUser(driver).click();
-        System.out.print("2");
         driver.switchTo().alert().accept();   
-        System.out.print("3");
         Logout_Action.Execute(driver);
-        System.out.print("4");
         WelcomePage.lnk_Login(driver).click();
-        System.out.print("5");
 		LoginPage.input_email(driver).sendKeys(Actualtext);
-		System.out.print("6");
 		LoginPage.input_password(driver).sendKeys("secret");
-		System.out.print("7");
 		LoginPage.btn_login(driver).click();	
-		System.out.print("8");
-	    String Deletetext = LoginPage.verifydeleteUserPath(driver).getText();
-	    System.out.print("9");	    
+	    String Deletetext = LoginPage.verifydeleteUserPath(driver).getText();	    
 	    Assert.assertEquals(Deletetext,"Your account is currently inactivated. Please contact your administrator for assistance.");
 	    System.out.print("\n deleteUserCQAdmin() -> CQ Admin Deletion executed");
 	    Logout_Action.Execute(driver);
@@ -114,12 +68,14 @@ public class Sprint3 {
 	 }
 		
     //verify pricing page
-	@Test(enabled=false,priority=5)
+	@Test(enabled=true,priority=5)
 	public void pricingPage() throws Exception {	
         WelcomePage.lnk_Pricing(driver).click();
         WelcomePage.lnk_Yearly(driver).click();
         Screenshot.Execute(driver);
-        System.out.print("\n Pricing functionality working");
+		WelcomePage.lnk_LargeTrialYr(driver).click();
+        driver.close(); 
+
 	}
         
     //verify no donation request form - CQ Admin
@@ -141,42 +97,49 @@ public class Sprint3 {
 	}
 	
 	   //verify dashboard,don pref - Busn Admin
-		@Test(enabled=false,priority=7)
+		@Test(enabled=false,priority=8)
 		public void myDonationFormbadmin() throws Exception { 
-			String winHandleBefore = driver.getWindowHandle();
-	        Login_Action.Execute(driver, "BusinessAdmin");
-	        HeaderLinks.lnk_MyBusiness(driver).click();
-	        HeaderLinks.lnk_ManualDonReq(driver).click();
-	        
-	        for(String winHandle : driver.getWindowHandles()){
-	            driver.switchTo().window(winHandle);
-	        }
-	        driver.switchTo().window(winHandleBefore);	
-	        Logout_Action.Execute(driver); 
+			Login_Action.Execute(driver, "BusinessAdmin");	
+			Log.info("User logged");
+			HeaderLinks.lnk_MyBusiness(driver).click();
+			HeaderLinks.lnk_ManualDonReq(driver).click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Set<String>ids = driver.getWindowHandles();
+			Iterator<String> it = ids.iterator();
+			String parentid = it.next();
+			String childid = it.next();
+			driver.switchTo().window(childid);
+			ManualDonationPage.input_orgname(driver).sendKeys("test");
+			Screenshot.Execute(driver);
+			driver.close();
+			driver.switchTo().window(parentid);
+			Logout_Action.Execute(driver);		
 		}
 		
 		   //verify dashboard,don pref - Busn User
-			@Test(enabled=false,priority=8)
+			@Test(enabled=false,priority=9)
 			public void myDonationFormBuser() throws Exception { 
-				String winHandleBefore = driver.getWindowHandle();
-		        Login_Action.Execute(driver, "BusinessUser");
-		        HeaderLinks.lnk_MyBusiness(driver).click();
-		        HeaderLinks.lnk_ManualDonReq(driver).click();
-		        
-		        for(String winHandle : driver.getWindowHandles()){
-		            driver.switchTo().window(winHandle);
-		        }
-		        driver.switchTo().window(winHandleBefore);	
-		        Logout_Action.Execute(driver); 
+				Login_Action.Execute(driver, "BusinessUser");	
+				Log.info("User logged");
+				HeaderLinks.lnk_MyBusiness(driver).click();
+				HeaderLinks.lnk_ManualDonReq(driver).click();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				Set<String>ids = driver.getWindowHandles();
+				Iterator<String> it = ids.iterator();
+				String parentid = it.next();
+				String childid = it.next();
+				driver.switchTo().window(childid);
+				ManualDonationPage.input_orgname(driver).sendKeys("test");
+				Screenshot.Execute(driver);
+				driver.close();
+				driver.switchTo().window(parentid);
+				Logout_Action.Execute(driver);	
 			}		
-
 	
      //close driver
-     @AfterSuite
+     @AfterSuite(enabled=true)
      public void closebrowser() throws Exception{ 
     	 driver.close();
       }
  
 	}
-
-

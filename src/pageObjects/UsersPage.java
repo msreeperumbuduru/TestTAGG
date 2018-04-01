@@ -32,7 +32,7 @@ private static WebElement element = null;
 		}
 	public static WebElement input_lastname(WebDriver driver)
 	{
-		element = driver.findElement(By.id("second_name"));
+		element = driver.findElement(By.id("last_name"));
 		return element;
 		}
 	public static WebElement input_emailAddr(WebDriver driver)

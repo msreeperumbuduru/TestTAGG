@@ -19,7 +19,7 @@ private static WebElement element = null;
 		}
 	public static WebElement lnk_SearchDonations(WebDriver driver)
 	{
-		element = driver.findElement(By.linkText("Search Donations"));
+		element = driver.findElement(By.partialLinkText("Donations"));
 		return element;
 		}
 	public static WebElement lnk_MyBusiness(WebDriver driver)

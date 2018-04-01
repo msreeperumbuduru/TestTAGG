@@ -61,24 +61,24 @@ public class WelcomePage {
 	}
 	public static WebElement lnk_smallTrialYr(WebDriver driver)
 	{
-		element = driver.findElement(By.id("small1"));
+		element = driver.findElement(By.id("Small"));
 		return element;
 	}
 
 	public static WebElement lnk_MediumTriaYr(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//*[@id=\"medium\"]"));
+		element = driver.findElement(By.id("Medium"));
 		return element;
 	}
 	
 	public static WebElement lnk_LargeTrialYr(WebDriver driver)
 	{
-		element = driver.findElement(By.id(""));
+		element = driver.findElement(By.id("Large"));
 		return element;
 	}
 	public static WebElement lnk_UnlimitedTrialYr(WebDriver driver)
 	{
-		element = driver.findElement(By.id("unlimited1"));
+		element = driver.findElement(By.id("Unlimited"));
 		return element;
 	}
 	public static WebElement lnk_Yearly(WebDriver driver)

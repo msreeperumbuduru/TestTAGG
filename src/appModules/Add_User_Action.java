@@ -12,9 +12,9 @@ public class Add_User_Action {
 		
 		String firstname = "Bsn";
 		String lastname = "User";
-		String emailaddr = "busern@cq.com";
+		String emailaddr = "busern2@cq.com";
 		String location = "CharityQ";
-		String role = "Business User";
+		String role = "CQ User";
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		HeaderLinks.lnk_MyBusiness(driver).click();			
@@ -30,5 +30,4 @@ public class Add_User_Action {
 	}
 	
 }
-
 

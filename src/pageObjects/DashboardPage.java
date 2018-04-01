@@ -10,16 +10,16 @@ private static WebElement element = null;
 	public static WebElement input_searchBox(WebDriver driver)
 	{
 		element = driver.findElement(By.xpath("//*[id='example_filter']/label/input"));
-		return element;
+		return element; 
 		}
 	public static WebElement lnk_Detail(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//*[@id='example']/tbody/tr/td[9]/a"));
+		element = driver.findElement(By.xpath("//*[@id='example']/tbody/tr/td[9]/a/span"));
 		return element;
 		}
 	public static WebElement lnk_Detail1(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//*[@id=\"details\"]/span"));
+		element = driver.findElement(By.xpath("//*[@id='details']/span"));
 		return element;
 		}
 	public static WebElement lnk_Next(WebDriver driver)
@@ -35,7 +35,7 @@ private static WebElement element = null;
 		}
 	public static WebElement lnk_back(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[2]/input"));
+		element = driver.findElement(By.xpath("//*[@id='wrapper']/div[2]/input"));
 		return element;
 		}
 	public static WebElement drpdwn_paging(WebDriver driver)

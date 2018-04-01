@@ -78,9 +78,20 @@ private static WebElement element = null;
 		element = driver.findElement(By.id("noCheck"));
 		return element;
 		}
-	public static WebElement drpdwn_requestfor(WebDriver driver)
+	public static Select drpdwn_requestfor(WebDriver driver)
+	{  
+		Select element = new Select(driver.findElement(By.id("item_requested")));
+		return element;
+		}
+	public static Select input_purpose(WebDriver driver)
 	{
-		element = driver.findElement(By.id("item_requested"));
+		Select element = new Select(driver.findElement(By.id("event_type")));
+		//element = driver.findElement(By.id("event_type"));
+		return element;
+		}
+	public static Select input_donpurpose(WebDriver driver)
+	{
+		Select element = new Select(driver.findElement(By.id("item_purpose")));
 		return element;
 		}
 	public static WebElement input_dollaramt(WebDriver driver)
@@ -88,12 +99,7 @@ private static WebElement element = null;
 		element = driver.findElement(By.id("dollar_amount"));
 		return element;
 		}
-	public static WebElement input_donpurpose(WebDriver driver)
-	{
-		element = driver.findElement(By.id("item_purpose"));
-		return element;
-		}
-	
+
 	public static WebElement cal_neededby(WebDriver driver)
 	{
 		element = driver.findElement(By.id("needed_by_date"));
@@ -107,12 +113,6 @@ private static WebElement element = null;
 	public static WebElement cal_eventdate(WebDriver driver)
 	{
 		element = driver.findElement(By.id("event_date"));
-		return element;
-		}
-	
-	public static WebElement input_purpose(WebDriver driver)
-	{
-		element = driver.findElement(By.id("event_type"));
 		return element;
 		}
 	

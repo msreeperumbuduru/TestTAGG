@@ -2,14 +2,11 @@ package appModules;
 import org.openqa.selenium.WebDriver;
 import pageObjects.*;
 
-//import utility.Log;
 
 public class Login_Action {
 	public static void Execute(WebDriver driver, String Email) throws Exception{
 		String sEmail="";
 		String sPassword="";
-		
-		
 		if (Email == "CharityQAdmin")
 		{
 			sEmail = "cqadmin@cq.com";
@@ -18,13 +15,12 @@ public class Login_Action {
 	
 		else if (Email == "CharityQUser")
 		{
-			sEmail = "cuser1@cq.com";
+			sEmail = "cquser5@cq.com";
             sPassword = "secret";
 		}
 		   
 		else if (Email == "BusinessAdmin")
 		{
-			System.out.print("entered login");
 			sEmail = "badmin@cq.com";
             sPassword = "secret";
           
