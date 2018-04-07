@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Regression_2" verbose="1" >
+  <test name="Regression_Functional" >
+   <groups>		
+   <run>		
+    <include name="Regression_Functional" />		
+   </run>		
+  </groups>
+    <classes>
+		<class name="automationFramework.Sprint1"/>
+		<class name="automationFramework.Sprint2"/>
+		<class name="automationFramework.Sprint3"/>
+		<class name="automationFramework.Sprint4"/>
+		<class name="automationFramework.Sprint5"/>
+    </classes>
+ </test>
+</suite>
+
+

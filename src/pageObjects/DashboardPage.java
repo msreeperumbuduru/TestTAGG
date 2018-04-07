@@ -19,7 +19,7 @@ private static WebElement element = null;
 		}
 	public static WebElement lnk_Detail1(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//*[@id='details']/span"));
+		element = driver.findElement(By.xpath("//*[@id=\"example\"]/tbody/tr[1]/td[9]/a/span"));
 		return element;
 		}
 	public static WebElement lnk_Next(WebDriver driver)

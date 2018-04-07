@@ -47,7 +47,7 @@ private static WebElement element = null;
 		}
 	public static WebElement input_CVV(WebDriver driver)
 	{
-		element = driver.findElement(By.name("cvCode"));
+		element = driver.findElement(By.id("cvCode"));
 		return element;
 		}
 	public static WebElement btn_Pay(WebDriver driver)

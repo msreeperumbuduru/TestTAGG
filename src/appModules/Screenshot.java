@@ -9,12 +9,10 @@ import org.openqa.selenium.WebDriver;
 
 public class Screenshot {
 	
-	public static void Execute(WebDriver driver) throws Exception{
-		System.out.print("Entered SS loop");		
+	public static void Execute(WebDriver driver) throws Exception{		
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		File dest = new File("D:\\moni\\"+System.currentTimeMillis()+".png");	
 		FileUtils.copyFile(src,dest);
-		System.out.print("SS Captured");
 	}
 
 }

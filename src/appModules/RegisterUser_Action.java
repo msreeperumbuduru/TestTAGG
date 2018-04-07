@@ -10,7 +10,7 @@ public class RegisterUser_Action {
  		 
 		String firstname = "Business";
 		String lastname = "Admin";
-		String email = "badmin1@cq.com";
+		String email = "badmin0@cq.com";
 		String passwrd = "secret";
 		String confpasswd = "secret";
 		String busnname = "Business Limited1";
@@ -36,7 +36,7 @@ public class RegisterUser_Action {
 		RegisterPage.inputState(driver).selectByVisibleText(state);
 		RegisterPage.inputZipCode(driver).sendKeys(zipcode);
 		RegisterPage.inputPhoneNumber(driver).sendKeys(phone);
-		RegisterPage.clickRegister(driver).submit();
+		RegisterPage.clickRegister(driver).click();
 		 
 		}
 }

@@ -29,7 +29,7 @@ private static WebElement element = null;
 	
 	public static WebElement input_addr2(WebDriver driver)
 	{
-		element = driver.findElement(By.id("street_address_2"));
+		element = driver.findElement(By.id("street_address2"));
 		return element;
 		}
 	
@@ -41,7 +41,7 @@ private static WebElement element = null;
 	
 	public static Select drpdwn_state(WebDriver driver)
 	{
-		Select element = new Select(driver.findElement(By.id("state")));
+		Select element = new Select(driver.findElement(By.name("state")));
 		return element;
 		}
 	

@@ -110,7 +110,7 @@ private static WebElement element = null;
 	
 	public static WebElement srch_viewDtls(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/div[2]/div[2]/div[3]/div[2]/table/tbody/tr[1]/td[10]/a/span"));
+		element = driver.findElement(By.xpath("//*[@id=\"example\"]/tbody/tr[1]/td[9]/a/span"));
 		return element;
 		}	
 

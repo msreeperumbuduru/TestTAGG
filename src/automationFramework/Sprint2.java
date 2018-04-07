@@ -27,11 +27,10 @@ public class Sprint2 extends Constant {
 		super();
 }
 	
-	@Test(enabled=true,priority=8)
+	@Test(enabled=false,priority=1)
 	public void ThankyouClose() throws Exception {
 
 		Login_Action.Execute(driver, "BusinessAdmin");	
-		Log.info("User logged");
 		HeaderLinks.lnk_MyBusiness(driver).click();
 		HeaderLinks.lnk_ManualDonReq(driver).click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -49,13 +48,14 @@ public class Sprint2 extends Constant {
 	}
         
 	//CharityQ admin role verification
-	@Test(enabled=false)
+	@Test(enabled=false,priority=2)
 	public void roleverif() throws Exception {
         Login_Action.Execute(driver, "CharityQAdmin");
 		HeaderLinks.lnk_MyBusiness(driver).click();			
 		HeaderLinks.lnk_Users(driver).click();
 		UsersPage.btn_AddUser(driver).click();
-		UsersPage.drpdwn_location(driver).selectByVisibleText("CharityQ");
+		UsersPage.drpdwn_location(driver).selectByValue("parent_1");
+		//UsersPage.drpdwn_role(driver).selectByVisibleText("CharityQ");
 		assertEquals(2, UsersPage.drpdwn_role(driver).getOptions().size());
 		StringBuffer options = new StringBuffer();  
 		List<WebElement> list=UsersPage.drpdwn_role(driver).getOptions();
@@ -114,6 +114,35 @@ public class Sprint2 extends Constant {
         HeaderLinks.lnk_Dashboard(driver).click();
         Screenshot.Execute(driver);
         Logout_Action.Execute(driver);
+	}
+	
+    //4 status - Active
+	@Test(enabled=true,priority=8)
+	public void ActiveStatus1() throws Exception {
+//		WelcomePage.lnk_SignUp(driver).click();
+//        RegisterUser_Action.Execute(driver);
+//        SubscriptionAction.Execute(driver);
+//        SubscriptionPage.btn_logout(driver).click();
+//        Login_Action.Execute(driver, "CQ Admin");
+//        HeaderLinks.lnk_Dashboard(driver).click();
+//        Screenshot.Execute(driver);
+//        Logout_Action.Execute(driver);
+//        Login_Action.Execute(driver, "CharityQUser");
+//        HeaderLinks.lnk_Dashboard(driver).click();
+//        Screenshot.Execute(driver);
+//        Logout_Action.Execute(driver);
+		
+		Login_Action.Execute(driver, "NewAdminSignUp");
+        SubscriptionAction.Execute(driver);
+        Logout_Action.Execute(driver);
+        Login_Action.Execute(driver, "CharityQAdmin");
+        HeaderLinks.lnk_Dashboard(driver).click();
+        Screenshot.Execute(driver);
+        Logout_Action.Execute(driver);
+//        Login_Action.Execute(driver, "CharityQUser");
+//        HeaderLinks.lnk_Dashboard(driver).click();
+//        Screenshot.Execute(driver);
+//        Logout_Action.Execute(driver);
 	}
         
         

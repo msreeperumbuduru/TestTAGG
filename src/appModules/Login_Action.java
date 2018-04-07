@@ -15,7 +15,7 @@ public class Login_Action {
 	
 		else if (Email == "CharityQUser")
 		{
-			sEmail = "cquser5@cq.com";
+			sEmail = "cquser@cq.com";
             sPassword = "secret";
 		}
 		   
@@ -39,7 +39,7 @@ public class Login_Action {
 		}
 		else if (Email == "NewAdminSignUp")
 		{
-			sEmail = "tobe1@deleted.com";
+			sEmail = "badmin0@cq.com";
             sPassword = "secret";
 		}
 		else if (Email == "BUSN USER DELETE")
@@ -51,8 +51,7 @@ public class Login_Action {
 		WelcomePage.lnk_Login(driver).click();
 		LoginPage.input_email(driver).sendKeys(sEmail);
 		LoginPage.input_password(driver).sendKeys(sPassword);
-		LoginPage.btn_login(driver).click();
-		
+		LoginPage.btn_login(driver).submit();
 	}
 }
 

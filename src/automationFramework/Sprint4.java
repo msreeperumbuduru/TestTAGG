@@ -28,29 +28,7 @@ public class Sprint4 extends Constant{
 	Logout_Action.Execute(driver);
 	}
 
-	//add email template - Bsn Admin
-	@Test(enabled=false, priority=1)
-    public void addTmpBadmin() throws Exception{
-		Login_Action.Execute(driver, "BusinessAdmin");
-        HeaderLinks.lnk_MyBusiness(driver).click();
-        Log.info("Clicked MyBusiness Link");
-        HeaderLinks.lnk_emailtmp(driver).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        Logout_Action.Execute(driver);
-        //--new email template needed
-    }
-        
-    //add email template - CQ Admin
-	@Test(enabled=false, priority=2)
-	public void addTmpCqAdmin() throws Exception{
-		Login_Action.Execute(driver, "CharityQAdmin");
-        HeaderLinks.lnk_MyBusiness(driver).click();
-        Log.info("Clicked MyBusiness Link");
-        HeaderLinks.lnk_emailtmp(driver).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        Logout_Action.Execute(driver);
-        //--new email template needed
-	}
+
 	//verify comma sepearted format for root
 	@Test(enabled=false,priority=4)
 	public void CommaRoot() throws Exception { 

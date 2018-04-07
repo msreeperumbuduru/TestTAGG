@@ -77,7 +77,7 @@ private static WebElement element = null;
 		}	
 	public static WebElement clickRegister(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//div//input[@value='Register']"));
+		element = driver.findElement(By.xpath("//*[contains(@class,'btn-basic')]"));
 		return element;
 		} 
 }

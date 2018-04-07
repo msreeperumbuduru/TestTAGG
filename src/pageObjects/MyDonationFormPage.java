@@ -30,7 +30,7 @@ private static WebElement element = null;
 	
 	public static WebElement btn_setPreferences(WebDriver driver)
 	{
-		element = driver.findElement(By.id("setDonationPref"));
+		element = driver.findElement(By.id("SetDonationPref"));
 		return element;
 		}
 	
