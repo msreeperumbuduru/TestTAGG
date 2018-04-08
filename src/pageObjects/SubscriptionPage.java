@@ -9,15 +9,20 @@ import org.openqa.selenium.support.ui.Select;
 public class SubscriptionPage {
 private static WebElement element = null;
 	
-	public static Select drpdwn_locations(WebDriver driver)
+	public static Select radio_locations(WebDriver driver)
 	{
 		Select sel =new Select(driver.findElement(By.name("user_locations")));
 		return sel;
 		}
-	public static Select ddrpdwn_plan(WebDriver driver) //Monthly //Annually
+	public static Select radio_plan(WebDriver driver) //Monthly //Annually
 	{
 		Select sel =new Select(driver.findElement(By.name("plan")));
 		return sel;
+		}
+	public static WebElement input_promocode(WebDriver driver) 
+	{
+		element = driver.findElement(By.id("coupon"));
+		return element;
 		}
 
 	public static WebElement btn_Apply(WebDriver driver) 
@@ -25,11 +30,7 @@ private static WebElement element = null;
 		element = driver.findElement(By.id("Apply"));
 		return element;
 		}
-	public static WebElement input_promocode(WebDriver driver) 
-	{
-		element = driver.findElement(By.id("coupon"));
-		return element;
-		}
+
 	public static WebElement input_cardNo(WebDriver driver)
 	{
 		element = driver.findElement(By.id("cardNumber"));

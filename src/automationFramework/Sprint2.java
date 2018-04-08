@@ -119,7 +119,7 @@ public class Sprint2 extends Constant {
     //4 status - Active
 	@Test(enabled=true,priority=8)
 	public void ActiveStatus1() throws Exception {
-//		WelcomePage.lnk_SignUp(driver).click();
+
 //        RegisterUser_Action.Execute(driver);
 //        SubscriptionAction.Execute(driver);
 //        SubscriptionPage.btn_logout(driver).click();

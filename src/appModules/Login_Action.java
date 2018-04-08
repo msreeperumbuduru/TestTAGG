@@ -42,7 +42,11 @@ public class Login_Action {
 			sEmail = "badmindelete@cq.com";
             sPassword = "secret";
 		}
-
+		else if (Email == "NewAdminSignUp")
+		{
+			sEmail = "badmin1@cq.com";
+            sPassword = "secret";
+		}
 		
 		WelcomePage.lnk_Login(driver).click();
 		LoginPage.input_email(driver).sendKeys(sEmail);

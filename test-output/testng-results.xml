@@ -1,49 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25890" started-at="2018-04-08T06:56:47Z" finished-at="2018-04-08T06:57:13Z">
+  <suite name="Default suite" duration-ms="8594" started-at="2018-04-08T16:58:34Z" finished-at="2018-04-08T16:58:42Z">
     <groups>
-      <group name="Regression_Functional">
-        <method signature="Sprint3.deleteUserBsnAdmin()[pri:0, instance:automationFramework.Sprint3@4b9e13df]" name="deleteUserBsnAdmin" class="automationFramework.Sprint3"/>
-        <method signature="Sprint3.deleteUserCQAdmin()[pri:0, instance:automationFramework.Sprint3@4b9e13df]" name="deleteUserCQAdmin" class="automationFramework.Sprint3"/>
-      </group> <!-- Regression_Functional -->
     </groups>
-    <test name="Default test" duration-ms="25890" started-at="2018-04-08T06:56:47Z" finished-at="2018-04-08T06:57:13Z">
-      <class name="automationFramework.Sprint3">
-        <test-method status="PASS" signature="launch()[pri:0, instance:automationFramework.Sprint3@4b9e13df]" name="launch" is-config="true" duration-ms="4962" started-at="2018-04-08T01:56:43Z" finished-at="2018-04-08T01:56:47Z">
+    <test name="Default test" duration-ms="8594" started-at="2018-04-08T16:58:34Z" finished-at="2018-04-08T16:58:42Z">
+      <class name="automationFramework.Basic_Regression">
+        <test-method status="PASS" signature="launch()[pri:0, instance:automationFramework.Basic_Regression@4b9e13df]" name="launch" is-config="true" duration-ms="5419" started-at="2018-04-08T11:58:28Z" finished-at="2018-04-08T11:58:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method status="PASS" signature="pricingPage()[pri:0, instance:automationFramework.Sprint3@4b9e13df]" name="pricingPage" duration-ms="1293" started-at="2018-04-08T01:56:47Z" finished-at="2018-04-08T01:56:49Z">
+        <test-method status="PASS" signature="ManualDonationRequests()[pri:0, instance:automationFramework.Basic_Regression@4b9e13df]" name="ManualDonationRequests" duration-ms="8580" started-at="2018-04-08T11:58:34Z" finished-at="2018-04-08T11:58:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- pricingPage -->
-        <test-method status="PASS" signature="omitDonFormCQAdmin()[pri:0, instance:automationFramework.Sprint3@4b9e13df]" name="omitDonFormCQAdmin" duration-ms="2653" started-at="2018-04-08T01:56:49Z" finished-at="2018-04-08T01:56:51Z">
+        </test-method> <!-- ManualDonationRequests -->
+        <test-method status="PASS" signature="closebrowser()[pri:0, instance:automationFramework.Basic_Regression@4b9e13df]" name="closebrowser" is-config="true" duration-ms="80" started-at="2018-04-08T11:58:43Z" finished-at="2018-04-08T11:58:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- omitDonFormCQAdmin -->
-        <test-method status="PASS" signature="omitDonFormCQUser()[pri:0, instance:automationFramework.Sprint3@4b9e13df]" name="omitDonFormCQUser" duration-ms="2500" started-at="2018-04-08T01:56:51Z" finished-at="2018-04-08T01:56:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- omitDonFormCQUser -->
-        <test-method status="PASS" signature="myDonationFormbadmin()[pri:0, instance:automationFramework.Sprint3@4b9e13df]" name="myDonationFormbadmin" duration-ms="3380" started-at="2018-04-08T01:56:54Z" finished-at="2018-04-08T01:56:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- myDonationFormbadmin -->
-        <test-method status="PASS" signature="myDonationFormBuser()[pri:0, instance:automationFramework.Sprint3@4b9e13df]" name="myDonationFormBuser" duration-ms="3040" started-at="2018-04-08T01:56:57Z" finished-at="2018-04-08T01:57:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- myDonationFormBuser -->
-        <test-method status="PASS" signature="deleteUserCQAdmin()[pri:0, instance:automationFramework.Sprint3@4b9e13df]" name="deleteUserCQAdmin" duration-ms="6940" started-at="2018-04-08T01:57:00Z" finished-at="2018-04-08T01:57:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteUserCQAdmin -->
-        <test-method status="PASS" signature="deleteUserBsnAdmin()[pri:0, instance:automationFramework.Sprint3@4b9e13df]" name="deleteUserBsnAdmin" duration-ms="6067" started-at="2018-04-08T01:57:07Z" finished-at="2018-04-08T01:57:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteUserBsnAdmin -->
-      </class> <!-- automationFramework.Sprint3 -->
+        </test-method> <!-- closebrowser -->
+      </class> <!-- automationFramework.Basic_Regression -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

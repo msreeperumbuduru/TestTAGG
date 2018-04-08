@@ -10,10 +10,10 @@ public class RegisterUser_Action {
  		 
 		String firstname = "Business";
 		String lastname = "Admin";
-		String email = "badmin0@cq.com";
+		String email = "badmin1@cq.com";
 		String passwrd = "secret";
 		String confpasswd = "secret";
-		String busnname = "Business Limited1";
+		String busnname = "Business Limited3";
 		String busntype = "Others";
 		String Addr1 = "62nd Street, Elmwood Park Road";
 		String Addr2 = "Peter Keweit Institute";
