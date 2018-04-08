@@ -16,12 +16,12 @@ private static WebElement element = null;
 		}
 	public static WebElement btn_EditUser(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div/div/div/div[2]/table/tbody/tr[1]/td[4]/a[2]"));
+		element = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div/div/div/div[2]/table/tbody/tr/td[4]/a[2]"));
 		return element;
 		}
 	public static WebElement btn_DeleteUser(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div/div/div/div[2]/table/tbody/tr[1]/td[4]/a[3]"));
+		element = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div/div/div/div[2]/table/tbody/tr/td[4]/a[3]"));
 		return element;
 		}
 	//create a user page

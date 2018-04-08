@@ -21,7 +21,7 @@ public class Sprint4 extends Constant{
 	}
 	
 	//Don pref page Checking Organization Type
-	@Test(enabled=true, priority=1)
+	@Test(enabled=false, priority=1)
 	public void donationpref() throws Exception{
 	Login_Action.Execute(driver, "BusinessAdmin");
 	DonationPreferences.Execute(driver);
@@ -30,36 +30,28 @@ public class Sprint4 extends Constant{
 
 
 	//verify comma sepearted format for root
-	@Test(enabled=false,priority=4)
+	@Test(enabled=true,priority=4)
 	public void CommaRoot() throws Exception { 
 		Login_Action.Execute(driver, "Root");
 		HeaderLinks.lnk_Dashboard(driver).click();
 		Screenshot.Execute(driver);
-		DashboardPage.lnk_Detail(driver).click();
-		Screenshot.Execute(driver);
 		HeaderLinks.lnk_SearchDonations(driver).click();
-		Screenshot.Execute(driver);
-		SearchDonationsPage.srch_viewDtls(driver).click();
 		Screenshot.Execute(driver);
 		Logout_Action.Execute(driver);
 	}
 	//verify comma sepearted format for cquser
-	@Test(enabled=false,priority=5)
+	@Test(enabled=true,priority=5)
 	public void CommaCqUser() throws Exception { 		
 		Login_Action.Execute(driver, "CharityQUser");
 		HeaderLinks.lnk_Dashboard(driver).click();
 		Screenshot.Execute(driver);
-		DashboardPage.lnk_Detail(driver).click();
-		Screenshot.Execute(driver);
 		HeaderLinks.lnk_SearchDonations(driver).click();
-		Screenshot.Execute(driver);
-		SearchDonationsPage.srch_viewDtls(driver).click();
 		Screenshot.Execute(driver);
 		Logout_Action.Execute(driver);
 	}
 	
-	//verify barlow font for all users
-	//verify cents truncated for all users
+	//verify barlow font for all users - manual
+	//verify cents truncated for all users - manual
 	//verify email
 	//verify additional don approved column
 	//Add status donation preferences are MET or NOT MET - Business Admin

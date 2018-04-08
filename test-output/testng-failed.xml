@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="automationFramework.Sprint2">
+      <class name="automationFramework.Sprint3">
         <methods>
           <include name="launch"/>
-          <include name="ActiveStatus1"/>
-          <include name="closeBrowser"/>
+          <include name="deleteUserBsnAdmin"/>
         </methods>
-      </class> <!-- automationFramework.Sprint2 -->
+      </class> <!-- automationFramework.Sprint3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

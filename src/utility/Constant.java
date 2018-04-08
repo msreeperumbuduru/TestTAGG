@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 
@@ -25,6 +26,13 @@ public class Constant {
    		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
    		driver.get(URL);
        }
+   	
+	
+    //close driver
+    @AfterSuite(alwaysRun = true)
+    public void closebrowser() throws Exception{ 
+   	 driver.close();
+     }
 
    }
    

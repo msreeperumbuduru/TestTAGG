@@ -45,12 +45,14 @@ private static WebElement element = null;
 
 	public static WebElement chk_ci(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/div/div[2]/form/div[3]/div[4]/input"));
-		return element;
+		//element = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/div/div[2]/form/div[3]/div[4]/input"));
+		element = driver.findElement(By.id("Faith/Religious"));
+		return element;//*[@id="Faith/Religious"]
 		}
 	public static WebElement chk_cg(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/div/div[2]/form/div[3]/div[5]/input"));
+		element = driver.findElement(By.id("Corporate Giving"));
+		//element = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/div/div[2]/form/div[3]/div[5]/input"));
 		return element;
 		}
 	public static WebElement chk_k12(WebDriver driver)

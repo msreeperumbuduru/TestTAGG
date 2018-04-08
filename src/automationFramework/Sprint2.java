@@ -144,12 +144,7 @@ public class Sprint2 extends Constant {
 //        Screenshot.Execute(driver);
 //        Logout_Action.Execute(driver);
 	}
-        
-        
-	@AfterTest(enabled=true)
-	public void closeBrowser() {
-		driver.close();
-	}
+
 
 }
 

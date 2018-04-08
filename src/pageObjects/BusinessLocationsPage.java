@@ -58,7 +58,7 @@ private static WebElement element = null;
 		}
 	public static WebElement label_SubsMessage(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]//div/div[1]")); 
+		element = driver.findElement(By.xpath("//*[@id=\"page-wrapper\"]/div[2]//div/div[1]")); 
 		return element;
 		}
 

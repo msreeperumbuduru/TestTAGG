@@ -108,9 +108,9 @@ public class Sprint3 extends Constant {
 		 }
 	        
 	    //verify delete a user - Bsn Admin
-		@Test(enabled=false,priority=7, groups = {"Regression_Functional"})
+		@Test(enabled=true,priority=7, groups = {"Regression_Functional"})
 		public void deleteUserBsnAdmin() throws Exception {
-			Login_Action.Execute(driver, "BusinessAdmin");
+			Login_Action.Execute(driver, "DeleteBusinessUser");
 	        HeaderLinks.lnk_MyBusiness(driver).click();
 	        HeaderLinks.lnk_Users(driver).click();
 	        Screenshot.Execute(driver); //verify user before deletion
@@ -128,11 +128,5 @@ public class Sprint3 extends Constant {
 		    String Deletetext = LoginPage.verifydeleteUserPath(driver).getText();	    
 		    Assert.assertEquals(Deletetext,"Your account is currently inactivated. Please contact your administrator for assistance.");
 		 }
-	
-     //close driver
-     @AfterSuite(enabled=true)
-     public void closebrowser() throws Exception{ 
-    	 driver.close();
-      }
  
 	}
