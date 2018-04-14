@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="automationFramework.Basic_Regression">
+      <class name="automationFramework.Sprint2">
         <methods>
-          <include name="Logins"/>
           <include name="launch"/>
-          <include name="closebrowser"/>
+          <include name="ActiveStatus1"/>
         </methods>
-      </class> <!-- automationFramework.Basic_Regression -->
+      </class> <!-- automationFramework.Sprint2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

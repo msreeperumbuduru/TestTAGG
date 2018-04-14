@@ -44,7 +44,7 @@ public class Login_Action {
 		}
 		else if (Email == "NewAdminSignUp")
 		{
-			sEmail = "badmin1@cq.com";
+			sEmail = "badminuser4@cq.com";
             sPassword = "secret";
 		}
 		

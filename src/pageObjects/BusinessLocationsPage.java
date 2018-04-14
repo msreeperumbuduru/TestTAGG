@@ -1,6 +1,8 @@
 package pageObjects;
 
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -61,6 +63,14 @@ private static WebElement element = null;
 		element = driver.findElement(By.xpath("//*[@id=\"page-wrapper\"]/div[2]//div/div[1]")); 
 		return element;
 		}
+	public static void Execute(WebDriver driver) {
 
+		List <WebElement> li=driver.findElements(By.xpath("//input[@type='submit']"));
+		        for(int i=0;i<=li.size()-1;i++)
+		        {
+		            li.get(0).click();
+		        }		        
+		}
+	
 }
 

@@ -22,7 +22,7 @@ public class Sprint1 extends Constant {
 	
 
 	//verify comma separated values currency format 
-	@Test(enabled=true,priority=1)
+	@Test(enabled=true,priority=5)
 	public void Commacqadmin() throws Exception { 
 		Login_Action.Execute(driver, "CharityQAdmin");
 		HeaderLinks.lnk_Dashboard(driver).click();
@@ -32,7 +32,7 @@ public class Sprint1 extends Constant {
 		Logout_Action.Execute(driver);
 	}
 	
-	@Test(enabled=true,priority=2)
+	@Test(enabled=true,priority=6)
 	public void CommaBadmin() throws Exception { 
 		Login_Action.Execute(driver, "BusinessAdmin");
 		HeaderLinks.lnk_Dashboard(driver).click();
@@ -42,9 +42,8 @@ public class Sprint1 extends Constant {
 		Logout_Action.Execute(driver);
 	}
 	
-	@Test(enabled=true,priority=3)
+	@Test(enabled=true,priority=7)
 	public void CommaBUser() throws Exception { 
-		
 		Login_Action.Execute(driver, "BusinessUser");
 		HeaderLinks.lnk_Dashboard(driver).click();
 		Screenshot.Execute(driver);
@@ -69,7 +68,7 @@ public class Sprint1 extends Constant {
 	}
 		
     //Request pending as badmin
-	@Test(enabled=true, priority=5, groups = {"Regression_Functional"} )
+	@Test(enabled=true, priority=2, groups = {"Regression_Functional"} )
 	public void PendingRequestsBadmin() throws Exception {
         Login_Action.Execute(driver, "BusinessAdmin");
         HeaderLinks.lnk_Dashboard(driver).click();
@@ -91,7 +90,7 @@ public class Sprint1 extends Constant {
 	}
 	
     //Request pending as buser	
-	@Test(enabled=true, priority=6, groups = {"Regression_Functional"})
+	@Test(enabled=true, priority=3, groups = {"Regression_Functional"})
 	public void PendingRequestsBUser() throws Exception {
         Login_Action.Execute(driver, "BusinessUser");
         HeaderLinks.lnk_Dashboard(driver).click();
@@ -114,7 +113,7 @@ public class Sprint1 extends Constant {
 	
 	//Don pref button functionality as badmin tc9
 	//Verify Mydonation form - badmin, buser, tc10,tc11,tc12
-	@Test(enabled=true,priority=7, groups = {"Regression_Functional"})
+	@Test(enabled=true,priority=1, groups = {"Regression_Functional"})
 	public void Mydonationform() throws Exception { 
 		Login_Action.Execute(driver, "BusinessAdmin");
 		Screenshot.Execute(driver);
@@ -127,7 +126,7 @@ public class Sprint1 extends Constant {
 	}
 	
 	//Verify update location page as Badmin	tc13, Buser	tc14
-	@Test(enabled=true,priority=8, groups = {"Regression_Functional"})
+	@Test(enabled=true,priority=4, groups = {"Regression_Functional"})
 	public void updatelocationBAdmin() throws Exception { 
 		Login_Action.Execute(driver, "BusinessAdmin");
 		UpdateBusinessLocations.Execute(driver, "BusinessAdmin");

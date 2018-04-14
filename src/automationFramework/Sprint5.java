@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 
 import appModules.Login_Action;
 import appModules.Logout_Action;
+import pageObjects.AvailableEmailTemplatesPage;
+import pageObjects.DashboardPage;
 import pageObjects.HeaderLinks;
 import utility.Constant;
 import utility.Log;
@@ -39,5 +41,5 @@ public class Sprint5 extends Constant{
         Logout_Action.Execute(driver);
         //--new email template needed
 	}
-
+	
 }

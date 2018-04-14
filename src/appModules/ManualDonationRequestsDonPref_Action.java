@@ -10,19 +10,26 @@ import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 
-public class ManualDonationRequests_Action {
+public class ManualDonationRequestsDonPref_Action {
 
-	public static void Execute(WebDriver driver) throws Exception {
+	public static void Execute(WebDriver driver, String Monthly, String Notice, String OrgType, String Tax, String DonType, String MaxAmt) throws Exception {
 		
 		SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy "); 	 
-	   	Date dt = new Date();Date dt1 = new Date();
-	   	Calendar c = Calendar.getInstance(); Calendar c1 = Calendar.getInstance(); 
-	   	c.setTime(dt);c1.setTime(dt1);  
-	   	c.add(Calendar.DATE, 10);c1.add(Calendar.DATE, 20);
-	   	dt = c.getTime();dt1 = c1.getTime();
-	   	String dateneeded= dateFormat.format(dt);String dateevent= dateFormat.format(dt1);
-	   	//System.out.println(dateneeded);
-	   	//System.out.println(dateevent);
+	   	
+		Date dt = new Date();
+	   	Calendar c = Calendar.getInstance(); 	 
+	   	c.setTime(dt);
+	   	c.add(Calendar.DATE, 10);
+	   	dt = c.getTime();
+	   	String dateneeded= dateFormat.format(dt);
+	   	
+	   	Date dt1 = new Date();
+	   	Calendar c1 = Calendar.getInstance(); 
+	   	c1.setTime(dt1); 
+	   	c1.add(Calendar.DATE, 20);
+	   	dt1 = c1.getTime();
+	   	String dateevent= dateFormat.format(dt1);
+   	
 		
 		String orgname = "Orange Travels1";
         String orgtype = "Environment";
@@ -35,18 +42,28 @@ public class ManualDonationRequests_Action {
         String city = "Omaha";
         String state = "Nebraska";
         String zip = "69012";
-        String reqfor = "Cash/Check";
-        String dolamt = "800";
         String donpurp = "Donation";
-        //String neededbydate = "3/31/2018";
-        //String neededbydate = dateneeded;
         String eventname = "Charity Fund Raiser";
-        //String eventdate = "4/31/2018";
-        //String eventdate = dateevent;
         String purpose = "Other";
         String noattend = "20";
         String venue = "Millard Public Library";
         String marketoopr = "TBA";
+        String reqfor = "";
+        String dolamt = "";
+		
+		if (Monthly == "PendingRejection")
+		{
+			dolamt = "500";         
+		}
+		if (Notice == "PendingRejection")
+		{
+			Notice = "";         
+		}
+		if (Monthly == "default" && Notice == "default" && OrgType == "default" && Tax == "default" && DonType == "default" && MaxAmt == "default")
+		{
+	        reqfor = "";
+	        dolamt = "520";         
+		}
         
 		ManualDonationPage.input_orgname(driver).sendKeys(orgname);
 		ManualDonationPage.drpdwn_orgtype(driver).selectByVisibleText(orgtype);

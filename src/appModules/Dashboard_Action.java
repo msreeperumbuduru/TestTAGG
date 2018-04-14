@@ -1,7 +1,10 @@
 package appModules;
 
-import org.openqa.selenium.WebDriver;
+import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import pageObjects.*;
 
@@ -16,6 +19,7 @@ public class Dashboard_Action {
 		DashboardPage.lnk_Detail1(driver).click();
 		Screenshot.Execute(driver);
 		DashboardPage.lnk_back(driver).click();
-		
 	}
+	
+
 }

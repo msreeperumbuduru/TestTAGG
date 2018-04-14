@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -49,9 +51,19 @@ private static WebElement element = null;
 		return element;
 		}
 	
-	public static WebElement btn_reject(WebDriver driver)
+	public static WebElement btn_Reject(WebDriver driver)
 	{
 		element = driver.findElement(By.xpath("//div//input[@value='Reject']"));
+		return element;
+		}
+	public static WebElement btn_ApproveDefault(WebDriver driver)
+	{
+		element = driver.findElement(By.xpath("//div//input[@value='Approve Default']"));
+		return element;
+		}
+	public static WebElement btn_RejectDefault(WebDriver driver)
+	{
+		element = driver.findElement(By.xpath("//div//input[@value='Reject Default']"));
 		return element;
 		}
 	public static WebElement dtl_cancel(WebDriver driver)
@@ -64,9 +76,14 @@ private static WebElement element = null;
 		element = driver.findElement(By.id("approved_amount"));
 		return element;
 		}
-	public static WebElement input_selectcheck(WebDriver driver)
-	{
-		element = driver.findElement(By.xpath("//*[id='example']/tbody/tr/td[1]/input"));
-		return element;
+
+	public static void Execute(WebDriver driver) {
+
+		List <WebElement> li=driver.findElements(By.xpath("//input[@type='checkbox']"));
+		        for(int i=0;i<=li.size()-1;i++)
+		        {
+		            li.get(1).click();
+		        }
 		}
+	
 }

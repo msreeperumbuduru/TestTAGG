@@ -2,7 +2,7 @@
 <suite name="Individual Sprints" verbose="1" >
   <test name="Sprint3" >
     <classes>
-      <class name="automationFramework.Sprint1"/>
+      <class name="automationFramework.Basic_Regression"/>
     </classes>
  </test>
 </suite>

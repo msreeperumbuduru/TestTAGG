@@ -20,27 +20,8 @@ public class Sprint4 extends Constant{
 		super();
 	}
 	
-	//Don pref page Checking Organization Type
-	@Test(enabled=false, priority=1)
-	public void donationpref() throws Exception{
-	Login_Action.Execute(driver, "BusinessAdmin");
-	DonationPreferences.Execute(driver);
-	Logout_Action.Execute(driver);
-	}
-
-
-	//verify comma sepearted format for root
-	@Test(enabled=true,priority=4)
-	public void CommaRoot() throws Exception { 
-		Login_Action.Execute(driver, "Root");
-		HeaderLinks.lnk_Dashboard(driver).click();
-		Screenshot.Execute(driver);
-		HeaderLinks.lnk_SearchDonations(driver).click();
-		Screenshot.Execute(driver);
-		Logout_Action.Execute(driver);
-	}
 	//verify comma sepearted format for cquser
-	@Test(enabled=true,priority=5)
+	@Test(enabled=true,priority=1)
 	public void CommaCqUser() throws Exception { 		
 		Login_Action.Execute(driver, "CharityQUser");
 		HeaderLinks.lnk_Dashboard(driver).click();
@@ -50,11 +31,15 @@ public class Sprint4 extends Constant{
 		Logout_Action.Execute(driver);
 	}
 	
-	//verify barlow font for all users - manual
-	//verify cents truncated for all users - manual
-	//verify email
-	//verify additional don approved column
-	//Add status donation preferences are MET or NOT MET - Business Admin
-	//Add status donation preferences are MET or NOT MET - Business User
+	//verify comma sepearted format for cquser
+	@Test(enabled=true,priority=2, groups = {"Regression_Functional"})
+	public void ApprovedAmount() throws Exception { 		
+		Login_Action.Execute(driver, "BusinessAdmin");
+		HeaderLinks.lnk_Dashboard(driver).click();
+		HeaderLinks.lnk_SearchDonations(driver).click();
+		Screenshot.Execute(driver);
+		Logout_Action.Execute(driver);
+	}
+		
 }
 	

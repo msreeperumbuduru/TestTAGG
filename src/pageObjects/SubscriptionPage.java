@@ -9,15 +9,36 @@ import org.openqa.selenium.support.ui.Select;
 public class SubscriptionPage {
 private static WebElement element = null;
 	
-	public static Select radio_locations(WebDriver driver)
+	public static WebElement radio_locations_5(WebDriver driver)
 	{
-		Select sel =new Select(driver.findElement(By.name("user_locations")));
-		return sel;
+		element =driver.findElement(By.xpath("//input[@value='5']"));
+		return element;
+	}
+    
+	public static WebElement radio_locations_25(WebDriver driver)
+	{
+		element =driver.findElement(By.xpath("//input[@value='25']"));
+		return element;
 		}
-	public static Select radio_plan(WebDriver driver) //Monthly //Annually
+	public static WebElement radio_locations_100(WebDriver driver)
 	{
-		Select sel =new Select(driver.findElement(By.name("plan")));
-		return sel;
+		element =driver.findElement(By.xpath("//input[@value='100']"));
+		return element;
+		}
+	public static WebElement radio_locations_unlimited(WebDriver driver)
+	{
+		element =driver.findElement(By.xpath("//input[@value='101+']"));
+		return element;
+		}
+	public static WebElement radio_plan_month(WebDriver driver) //Monthly 
+	{
+		element =driver.findElement(By.xpath("//input[@value='Monthly']"));
+		return element;
+		}
+	public static WebElement radio_plan_annual(WebDriver driver)  //Annually
+	{
+		element =driver.findElement(By.xpath("//input[@value='Annually']"));
+		return element;
 		}
 	public static WebElement input_promocode(WebDriver driver) 
 	{
@@ -27,7 +48,7 @@ private static WebElement element = null;
 
 	public static WebElement btn_Apply(WebDriver driver) 
 	{
-		element = driver.findElement(By.id("Apply"));
+		element = driver.findElement(By.id("apply"));
 		return element;
 		}
 

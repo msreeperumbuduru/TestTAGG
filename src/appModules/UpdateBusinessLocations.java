@@ -37,6 +37,28 @@ import pageObjects.*;
 			zip = "68107";
 			phone = "4021234568";
 		}
+		
+		if (User == "CharityQAdmin") {
+			name = "CharityQ";
+			desc = "Administrator and Owner of CharityQ";
+			addr1 = "17117 Oak Drive";
+			addr2 = "Ste. A";
+			city = "Omaha";
+			state = "Nebraska";
+			zip = "68130";
+			phone = "4027155230";
+		}
+		
+		if (User == "CharityQUser") {
+			name = "CharityQ";
+			desc = "Administrator and Owner of CharityQ";
+			addr1 = "17117 Oak Drive";
+			addr2 = "Ste. A";
+			city = "Omaha";
+			state = "Nebraska";
+			zip = "68130";
+			phone = "4027155230";
+		}
 
 		    HeaderLinks.lnk_MyBusiness(driver).click();
 		    HeaderLinks.lnk_BusinessProfile(driver).click();

@@ -3,9 +3,6 @@ package automationFramework;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import appModules.*;
@@ -27,66 +24,46 @@ public class Sprint3 extends Constant {
 		WelcomePage.lnk_LargeTrialYr(driver).click();
 	}
         
-    //verify no donation request form - CQ Admin
+    //verify no donation request form - CQ Admin, CQ User
 	@Test(enabled=true,priority=2)
-	public void omitDonFormCQAdmin() throws Exception {
+	public void omitDonForm() throws Exception {
         Login_Action.Execute(driver, "CharityQAdmin");
         HeaderLinks.lnk_MyBusiness(driver).click();
         Screenshot.Execute(driver);
         Logout_Action.Execute(driver);
-	}
-        
-    //no donation request form - CQ User
-	@Test(enabled=true,priority=3)
-	public void omitDonFormCQUser() throws Exception { 
         Login_Action.Execute(driver, "CharityQUser");
         HeaderLinks.lnk_MyBusiness(driver).click();
         Screenshot.Execute(driver);
-        Logout_Action.Execute(driver); 
+        Logout_Action.Execute(driver);
+	}      
+	
+	public void DonationForm() throws Exception { 
+		HeaderLinks.lnk_MyBusiness(driver).click();
+		HeaderLinks.lnk_ManualDonReq(driver).click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Set<String>ids = driver.getWindowHandles();
+		Iterator<String> it = ids.iterator();
+		String parentid = it.next();
+		String childid = it.next();
+		driver.switchTo().window(childid);
+		ManualDonationPage.input_orgname(driver).sendKeys("test");
+		Screenshot.Execute(driver);
+		driver.close();
+		driver.switchTo().window(parentid);
+		Logout_Action.Execute(driver);		
 	}
 	
 	   //verify dashboard,don pref - Busn Admin
-		@Test(enabled=true,priority=4)
-		public void myDonationFormbadmin() throws Exception { 
+		@Test(enabled=true,priority=3)
+		public void myDonationForm() throws Exception { 
 			Login_Action.Execute(driver, "BusinessAdmin");	
-			Log.info("User logged");
-			HeaderLinks.lnk_MyBusiness(driver).click();
-			HeaderLinks.lnk_ManualDonReq(driver).click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			Set<String>ids = driver.getWindowHandles();
-			Iterator<String> it = ids.iterator();
-			String parentid = it.next();
-			String childid = it.next();
-			driver.switchTo().window(childid);
-			ManualDonationPage.input_orgname(driver).sendKeys("test");
-			Screenshot.Execute(driver);
-			driver.close();
-			driver.switchTo().window(parentid);
-			Logout_Action.Execute(driver);		
-		}
-		
-		   //verify dashboard,don pref - Busn User
-			@Test(enabled=true,priority=5)
-			public void myDonationFormBuser() throws Exception { 
-				Login_Action.Execute(driver, "BusinessUser");	
-				Log.info("User logged");
-				HeaderLinks.lnk_MyBusiness(driver).click();
-				HeaderLinks.lnk_ManualDonReq(driver).click();
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-				Set<String>ids = driver.getWindowHandles();
-				Iterator<String> it = ids.iterator();
-				String parentid = it.next();
-				String childid = it.next();
-				driver.switchTo().window(childid);
-				ManualDonationPage.input_orgname(driver).sendKeys("test");
-				Screenshot.Execute(driver);
-				driver.close();
-				driver.switchTo().window(parentid);
-				Logout_Action.Execute(driver);	
-			}		
+			DonationForm();
+			Login_Action.Execute(driver, "BusinessUser");
+			DonationForm();
+		}		
 		
 		//verify delete a user - CQ Admin
-		@Test(enabled=true,priority=6, groups = {"Regression_Functional"})
+		@Test(enabled=false,priority=4, groups = {"Regression_Functional"})
 		public void deleteUserCQAdmin() throws Exception {
 			Login_Action.Execute(driver, "CharityQAdmin");
 	        HeaderLinks.lnk_MyBusiness(driver).click();
@@ -94,7 +71,7 @@ public class Sprint3 extends Constant {
 	        Screenshot.Execute(driver); //verify user before deletion
 	        UsersPage.btn_EditUser(driver).click();
 	        String Actualtext = UsersPage.input_emailAddr(driver).getAttribute("value");
-	        System.out.println("cqadmin email is:" +Actualtext);
+	        //System.out.println("cqadmin email is:" +Actualtext);
 	        UsersPage.UpProfileCancel(driver).click();
 	        UsersPage.btn_DeleteUser(driver).click();
 	        driver.switchTo().alert().accept();   
@@ -108,7 +85,7 @@ public class Sprint3 extends Constant {
 		 }
 	        
 	    //verify delete a user - Bsn Admin
-		@Test(enabled=true,priority=7, groups = {"Regression_Functional"})
+		@Test(enabled=false,priority=5, groups = {"Regression_Functional"})
 		public void deleteUserBsnAdmin() throws Exception {
 			Login_Action.Execute(driver, "DeleteBusinessUser");
 	        HeaderLinks.lnk_MyBusiness(driver).click();
@@ -116,7 +93,7 @@ public class Sprint3 extends Constant {
 	        Screenshot.Execute(driver); //verify user before deletion
 	        UsersPage.btn_EditUser(driver).click();
 	        String Actualtext = UsersPage.input_emailAddr(driver).getAttribute("value");
-	        System.out.println("badmin email is:" +Actualtext);
+	        //System.out.println("badmin email is:" +Actualtext);
 	        UsersPage.UpProfileCancel(driver).click();
 	        UsersPage.btn_DeleteUser(driver).click();
 	        driver.switchTo().alert().accept();    	

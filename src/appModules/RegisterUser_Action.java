@@ -10,7 +10,7 @@ public class RegisterUser_Action {
  		 
 		String firstname = "Business";
 		String lastname = "Admin";
-		String email = "badmin1@cq.com";
+		String email = "badminuser4@cq.com";
 		String passwrd = "secret";
 		String confpasswd = "secret";
 		String busnname = "Business Limited3";

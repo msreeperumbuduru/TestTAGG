@@ -27,7 +27,7 @@ public class Sprint2 extends Constant {
 		super();
 }
 	
-	@Test(enabled=false,priority=1)
+	@Test(enabled=true,priority=1, groups = {"Regression_Functional"})
 	public void ThankyouClose() throws Exception {
 
 		Login_Action.Execute(driver, "BusinessAdmin");	
@@ -48,7 +48,7 @@ public class Sprint2 extends Constant {
 	}
         
 	//CharityQ admin role verification
-	@Test(enabled=false,priority=2)
+	@Test(enabled=true,priority=2, groups = {"Regression_Functional"})
 	public void roleverif() throws Exception {
         Login_Action.Execute(driver, "CharityQAdmin");
 		HeaderLinks.lnk_MyBusiness(driver).click();			
@@ -64,11 +64,10 @@ public class Sprint2 extends Constant {
 			options.append((list.get(i)).getText());
 		}
 		assertEquals(options.toString(),"CQ AdminCQ User");
-		System.out.println("SP2_TC_5--> PASSED");
 		}
 		
     //4 status - Incomplete
-	@Test(enabled=false)
+	@Test(enabled=false, groups = {"Regression_Functional"})
 	public void Incompletestatus() throws Exception {
         WelcomePage.lnk_SignUp(driver).click();
         RegisterUser_Action.Execute(driver);
@@ -84,7 +83,7 @@ public class Sprint2 extends Constant {
 	}
         
     //4 status - Active
-	@Test(enabled=false)
+	@Test(enabled=false,groups = {"Regression_Functional"})
 	public void ActiveStatus() throws Exception {
         Login_Action.Execute(driver, "NewAdminSignUp");
         SubscriptionAction.Execute(driver);

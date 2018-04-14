@@ -8,19 +8,63 @@ import pageObjects.*;
 public class UpdateUserProfile_Action {
 
 
-	public static void Execute(WebDriver driver) throws Exception {
+	public static void Execute(WebDriver driver, String User) throws Exception {
 		
-		String firstname = "Business";
-		String lastname = "Admin";
-		String email = "badmin@cq.com";
-		String addr1 = "62nd Street, Elmwood Park Road";
-		String addr2 = "Peter Keweit Institute";
-		String city = "Omaha";
-		String state = "Nebraska";
-		String zip = "68109";
-		String phone = "4024738743";
+		String firstname = "";
+		String lastname = "";
+		String email = "";
+		String addr1 = "";
+		String addr2 = "";
+		String city = "";
+		String state = "";
+		String zip = "";
+		String phone = "";
 		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		if (User == "BusinessAdmin") {
+		firstname = "Business";
+		lastname = "Admin";
+		email = "badmin@cq.com";
+		addr1 = "62nd Street, Elmwood Park Road";
+		addr2 = "Peter Keweit Institute";
+		city = "Omaha";
+		state = "Nebraska";
+		zip = "68109";
+		phone = "4024738743";	
+		}		
+		if (User == "BusinessUser") {
+		firstname = "Business";
+		lastname = "User";
+		email = "buser@cq.com";
+		addr1 = "62nd Street, Elmwood Park Road";
+		addr2 = "Peter Keweit Institute";
+		city = "Omaha";
+		state = "Nebraska";
+		zip = "68109";
+		phone = "4024738743";	
+		}
+		if (User == "CQAdmin") {
+		firstname = "CQ";
+		lastname = "Admin";
+		email = "cqadmin@cq.com";
+		addr1 = "17117 Oak Drive";
+		addr2 = "Ste. A";
+		city = "Omaha";
+		state = "Nebraska";
+		zip = "68130";
+		phone = "4027155230";	
+		}
+		if (User == "CQUser") {
+		firstname = "CQ";
+		lastname = "User";
+		email = "cquser@cq.com";
+		addr1 = "17117 Oak Drive";
+		addr2 = "Ste. A";
+		city = "Omaha";
+		state = "Nebraska";
+		zip = "68130";
+		phone = "4027155230";	
+		}
+		
 		
 		UserProfilePage.btn_Edit(driver).click();
 		UserProfilePage.input_FirstName(driver).sendKeys(firstname);			
