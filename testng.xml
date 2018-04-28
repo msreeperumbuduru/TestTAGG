@@ -3,6 +3,10 @@
   <test name="Sprint3" >
     <classes>
       <class name="automationFramework.Basic_Regression"/>
+      <methods>
+      	<include name="DonationPreferences"/>
+      </methods>
     </classes>
  </test>
 </suite>
+

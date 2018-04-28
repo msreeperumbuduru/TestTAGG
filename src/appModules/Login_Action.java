@@ -9,13 +9,13 @@ public class Login_Action {
 		String sPassword="";
 		if (Email == "CharityQAdmin")
 		{
-			sEmail = "cqadmin@cq.com";
+			sEmail = "CQADMINS@CQ.COM";
             sPassword = "secret";
 		}
 	
 		else if (Email == "CharityQUser")
 		{
-			sEmail = "cquser@cq.com";
+			sEmail = "CQUSERS@CQ.COM";
             sPassword = "secret";
 		}
 		   
@@ -37,21 +37,30 @@ public class Login_Action {
 			sEmail = "admin@cq.com";
             sPassword = "secret";
 		}
+		else if (Email == "DeleteCQUser")
+		{
+			sEmail = "badmindelete1@cq.com";
+            sPassword = "secret";
+		}
 		else if (Email == "DeleteBusinessUser")
 		{
-			sEmail = "badmindelete@cq.com";
+			sEmail = "cqadmindelete@cq.com";
             sPassword = "secret";
 		}
 		else if (Email == "NewAdminSignUp")
 		{
-			sEmail = "badminuser4@cq.com";
+			sEmail = "badminuser6@cq.com";
             sPassword = "secret";
 		}
 		
 		WelcomePage.lnk_Login(driver).click();
+		Thread.sleep(500);
 		LoginPage.input_email(driver).sendKeys(sEmail);
+		Thread.sleep(500);
 		LoginPage.input_password(driver).sendKeys(sPassword);
+		Thread.sleep(500);
 		LoginPage.btn_login(driver).submit();
+		Thread.sleep(500);
 	}
 }
 

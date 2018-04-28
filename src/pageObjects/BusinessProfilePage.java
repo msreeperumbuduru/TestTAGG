@@ -72,4 +72,34 @@ private static WebElement element = null;
 		element = driver.findElement(By.id("Cancel"));
 		return element;
 		}
+	public static WebElement input_cardNumber(WebDriver driver)
+	{
+		element = driver.findElement(By.id("cardNumber"));
+		return element;
+		}
+	public static WebElement input_expMonth(WebDriver driver)
+	{
+		element = driver.findElement(By.id("expiryMonth"));
+		return element;
+		}
+	public static WebElement input_expYear(WebDriver driver)
+	{
+		element = driver.findElement(By.id("expiryYear"));
+		return element;
+		}
+	public static WebElement input_cvc(WebDriver driver)
+	{
+		element = driver.findElement(By.id("cvCode"));
+		return element;
+		}
+	public static WebElement btn_updateCardDtl(WebDriver driver)
+	{
+		element = driver.findElement(By.id("update-default-card"));
+		return element;
+		}
+	public static WebElement text_alert(WebDriver driver)
+	{
+		element = driver.findElement(By.xpath("//*[@id='update-form']/div[1]/ul"));
+		return element;
+		}
 }

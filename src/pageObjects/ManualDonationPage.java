@@ -8,6 +8,12 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ManualDonationPage {
 private static WebElement element = null;
+
+	public static Select drpdwn_bsnloc(WebDriver driver)
+	{
+		Select element = new Select(driver.findElement(By.name("type_name")));
+		return element;
+	}
 	
 	public static WebElement input_orgname(WebDriver driver)
 	{

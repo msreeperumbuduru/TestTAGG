@@ -33,7 +33,7 @@ public class Constant {
    	
 	
     //close driver
-    //@AfterSuite(alwaysRun = true)
+    @AfterSuite(alwaysRun = true)
     public void closebrowser() throws Exception{ 
    	 driver.close();
      }

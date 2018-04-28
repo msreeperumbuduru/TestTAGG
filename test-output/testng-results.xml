@@ -1,55 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="63953" started-at="2018-04-14T20:02:44Z" finished-at="2018-04-14T20:03:48Z">
+  <suite name="Individual Sprints" duration-ms="96142" started-at="2018-04-26T23:10:13Z" finished-at="2018-04-26T23:11:49Z">
     <groups>
-      <group name="Regression_Functional">
-        <method signature="Sprint1.Mydonationform()[pri:0, instance:automationFramework.Sprint1@cb5822]" name="Mydonationform" class="automationFramework.Sprint1"/>
-        <method signature="Sprint1.PendingRequestsBUser()[pri:0, instance:automationFramework.Sprint1@cb5822]" name="PendingRequestsBUser" class="automationFramework.Sprint1"/>
-        <method signature="Sprint1.PendingRequestsBadmin()[pri:0, instance:automationFramework.Sprint1@cb5822]" name="PendingRequestsBadmin" class="automationFramework.Sprint1"/>
-        <method signature="Sprint1.updatelocationBAdmin()[pri:0, instance:automationFramework.Sprint1@cb5822]" name="updatelocationBAdmin" class="automationFramework.Sprint1"/>
-      </group> <!-- Regression_Functional -->
     </groups>
-    <test name="Default test" duration-ms="63953" started-at="2018-04-14T20:02:44Z" finished-at="2018-04-14T20:03:48Z">
-      <class name="automationFramework.Sprint1">
-        <test-method status="PASS" signature="launch()[pri:0, instance:automationFramework.Sprint1@cb5822]" name="launch" is-config="true" duration-ms="7396" started-at="2018-04-14T15:02:37Z" finished-at="2018-04-14T15:02:44Z">
+    <test name="Sprint3" duration-ms="96142" started-at="2018-04-26T23:10:13Z" finished-at="2018-04-26T23:11:49Z">
+      <class name="automationFramework.Basic_Regression">
+        <test-method status="PASS" signature="launch()[pri:0, instance:automationFramework.Basic_Regression@4b9e13df]" name="launch" is-config="true" duration-ms="4627" started-at="2018-04-26T18:10:08Z" finished-at="2018-04-26T18:10:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method status="PASS" signature="Mydonationform()[pri:0, instance:automationFramework.Sprint1@cb5822]" name="Mydonationform" duration-ms="18742" started-at="2018-04-14T15:02:44Z" finished-at="2018-04-14T15:03:03Z">
+        <test-method status="PASS" signature="DonationPreferences()[pri:0, instance:automationFramework.Basic_Regression@4b9e13df]" name="DonationPreferences" duration-ms="96129" started-at="2018-04-26T18:10:13Z" finished-at="2018-04-26T18:11:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Mydonationform -->
-        <test-method status="PASS" signature="PendingRequestsBadmin()[pri:0, instance:automationFramework.Sprint1@cb5822]" name="PendingRequestsBadmin" duration-ms="9012" started-at="2018-04-14T15:03:03Z" finished-at="2018-04-14T15:03:12Z">
+        </test-method> <!-- DonationPreferences -->
+        <test-method status="PASS" signature="closebrowser()[pri:0, instance:automationFramework.Basic_Regression@4b9e13df]" name="closebrowser" is-config="true" duration-ms="2374" started-at="2018-04-26T18:11:49Z" finished-at="2018-04-26T18:11:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PendingRequestsBadmin -->
-        <test-method status="PASS" signature="PendingRequestsBUser()[pri:0, instance:automationFramework.Sprint1@cb5822]" name="PendingRequestsBUser" duration-ms="8395" started-at="2018-04-14T15:03:12Z" finished-at="2018-04-14T15:03:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PendingRequestsBUser -->
-        <test-method status="PASS" signature="updatelocationBAdmin()[pri:0, instance:automationFramework.Sprint1@cb5822]" name="updatelocationBAdmin" duration-ms="9455" started-at="2018-04-14T15:03:20Z" finished-at="2018-04-14T15:03:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updatelocationBAdmin -->
-        <test-method status="PASS" signature="verifySubsDate()[pri:0, instance:automationFramework.Sprint1@cb5822]" name="verifySubsDate" duration-ms="6420" started-at="2018-04-14T15:03:30Z" finished-at="2018-04-14T15:03:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySubsDate -->
-        <test-method status="PASS" signature="Commacqadmin()[pri:0, instance:automationFramework.Sprint1@cb5822]" name="Commacqadmin" duration-ms="4155" started-at="2018-04-14T15:03:36Z" finished-at="2018-04-14T15:03:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Commacqadmin -->
-        <test-method status="PASS" signature="CommaBadmin()[pri:0, instance:automationFramework.Sprint1@cb5822]" name="CommaBadmin" duration-ms="3695" started-at="2018-04-14T15:03:40Z" finished-at="2018-04-14T15:03:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CommaBadmin -->
-        <test-method status="PASS" signature="CommaBUser()[pri:0, instance:automationFramework.Sprint1@cb5822]" name="CommaBUser" duration-ms="4059" started-at="2018-04-14T15:03:44Z" finished-at="2018-04-14T15:03:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CommaBUser -->
-      </class> <!-- automationFramework.Sprint1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- closebrowser -->
+      </class> <!-- automationFramework.Basic_Regression -->
+    </test> <!-- Sprint3 -->
+  </suite> <!-- Individual Sprints -->
 </testng-results>

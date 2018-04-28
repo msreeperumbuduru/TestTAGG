@@ -15,14 +15,24 @@ public class SubscriptionAction {
 		String cvv = "123";
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		SubscriptionPage.radio_locations_25(driver).click();
+		Thread.sleep(5000);
 		SubscriptionPage.radio_plan_annual(driver).click();
+		Thread.sleep(5000);
 		SubscriptionPage.input_promocode(driver).sendKeys(promo);
+		Thread.sleep(5000);
 		SubscriptionPage.btn_Apply(driver).click();
+		Thread.sleep(5000);
 		SubscriptionPage.input_cardNo(driver).sendKeys(cardno);
+		Thread.sleep(5000);
 		SubscriptionPage.input_expMonth(driver).sendKeys(expmm);
+		Thread.sleep(5000);
 		SubscriptionPage.input_expYear(driver).sendKeys(expyy);
+		Thread.sleep(5000);
 		SubscriptionPage.input_CVV(driver).sendKeys(cvv);
+		Thread.sleep(5000);
 		SubscriptionPage.btn_Pay(driver).click();
+		Thread.sleep(5000);
 	}
 }

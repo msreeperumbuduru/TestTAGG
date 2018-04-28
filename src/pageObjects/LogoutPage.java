@@ -10,7 +10,7 @@ private static WebElement element = null;
 	
 public static WebElement lnk_user(WebDriver driver)
 {
-	element = driver.findElement(By.id("username"));
+	element = driver.findElement(By.xpath("//*[@id=\"bs-example-navbar-collapse-1\"]/ul/ul/li[5]/a"));
 	return element;
 	}
 

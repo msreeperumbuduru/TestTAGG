@@ -15,7 +15,7 @@ public class AvailableEmailTemplatesPage {
 		List <WebElement> li=driver.findElements(By.xpath("//input[@type='radio']"));
 		        for(int i=0;i<=li.size()-1;i++)
 		        {
-		            li.get(1).click();
+		            li.get(0).click();
 		        }
 		}
 	public static void RadioListTemp2(WebDriver driver) {
@@ -23,7 +23,7 @@ public class AvailableEmailTemplatesPage {
 		List <WebElement> li=driver.findElements(By.xpath("//input[@type='radio']"));
 		        for(int i=0;i<=li.size()-1;i++)
 		        {
-		            li.get(2).click();
+		            li.get(1).click();
 		        }
 		}
 	public static void RadioListTemp3(WebDriver driver) {
@@ -31,7 +31,7 @@ public class AvailableEmailTemplatesPage {
 		List <WebElement> li=driver.findElements(By.xpath("//input[@type='radio']"));
 		        for(int i=0;i<=li.size()-1;i++)
 		        {
-		            li.get(3).click();
+		            li.get(2).click();
 		        }
 		}
 	

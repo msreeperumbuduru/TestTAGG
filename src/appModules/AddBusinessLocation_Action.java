@@ -31,14 +31,23 @@ if (User == "BusinessAdmin") {
 }
 
     BusinessLocationsPage.btn_addbsnloc(driver).click();
+    Thread.sleep(500);
 	BusinessProfilePage.input_bsnName(driver).sendKeys(name);
+	Thread.sleep(500);
 	BusinessProfilePage.input_bsnDes(driver).sendKeys(desc);
+	Thread.sleep(500);
 	BusinessProfilePage.input_addr1(driver).sendKeys(addr1);
+	Thread.sleep(500);
 	BusinessProfilePage.input_addr2(driver).sendKeys(addr2);
+	Thread.sleep(500);
 	BusinessProfilePage.input_city(driver).sendKeys(city);
+	Thread.sleep(500);
 	BusinessProfilePage.drpdwn_state(driver).selectByVisibleText("Nebraska");
+	Thread.sleep(500);
 	BusinessProfilePage.input_zipcode(driver).sendKeys(zip);
+	Thread.sleep(500);
 	BusinessProfilePage.input_phoneno(driver).sendKeys(phone);
+	Thread.sleep(500);
 	BusinessLocationsPage.btn_LocaddBsnLoc(driver).click();
 }
 

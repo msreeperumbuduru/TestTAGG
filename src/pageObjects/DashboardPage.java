@@ -11,7 +11,7 @@ private static WebElement element = null;
 	
 	public static WebElement input_searchBox(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//*[id='example_filter']/label/input"));
+		element = driver.findElement(By.xpath("//input[@type='search']"));
 		return element; 
 		}
 	public static WebElement lnk_Detail(WebDriver driver)
@@ -45,25 +45,25 @@ private static WebElement element = null;
 		element = driver.findElement(By.name("example_length"));
 		return element;
 		}
-	public static WebElement btn_Approve(WebDriver driver)
+	public static WebElement btn_ApproveCustomize(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//div//input[@value='Approve']"));
+		element = driver.findElement(By.xpath("//div//input[@value='Approve & customize response']"));
 		return element;
 		}
 	
 	public static WebElement btn_Reject(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//div//input[@value='Reject']"));
+		element = driver.findElement(By.xpath("//div//input[@value='Reject & customize response']"));
 		return element;
 		}
 	public static WebElement btn_ApproveDefault(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//div//input[@value='Approve Default']"));
+		element = driver.findElement(By.xpath("//div//input[@value='Approve & send default email']"));
 		return element;
 		}
 	public static WebElement btn_RejectDefault(WebDriver driver)
 	{
-		element = driver.findElement(By.xpath("//div//input[@value='Reject Default']"));
+		element = driver.findElement(By.xpath("//div//input[@value='Reject & send default email']"));
 		return element;
 		}
 	public static WebElement dtl_cancel(WebDriver driver)
@@ -80,9 +80,12 @@ private static WebElement element = null;
 	public static void Execute(WebDriver driver) {
 
 		List <WebElement> li=driver.findElements(By.xpath("//input[@type='checkbox']"));
-		        for(int i=0;i<=li.size()-1;i++)
+		int iSize = li.size();
+		        for(int i=1;i<=iSize;i++)
 		        {
-		            li.get(1).click();
+		        	if(!li.get(1).isSelected()) {
+		        		li.get(1).click();
+		        }
 		        }
 		}
 	

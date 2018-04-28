@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -123,6 +125,15 @@ private static WebElement element = null;
 	{
 		element = driver.findElement(By.xpath("//*[id='example']/tbody/tr[3]/td[8]/div/form/button[2/i"));
 		return element;
+		}
+	
+	public static void Execute(WebDriver driver) {
+
+		List <WebElement> li=driver.findElements(By.xpath("//a[@title='Detail']"));
+		        for(int i=0;i<=li.size()-1;i++)
+		        {
+		            li.get(0).click();
+		        }
 		}
 	
 }
